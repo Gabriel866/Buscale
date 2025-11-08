@@ -7,7 +7,6 @@ Gabriel Enrique Lugo López
 ## Proyecto
 Buscador de tesxto sobre biología y botánica desarrollado en Python – Streamlit.
 
-
 # Análisis de texto y palabras calve de Biología – Botánica
 
 Aplicación interactiva desarrollada en Python con Streamlit, diseñada para explorar palabras clave y texto relacionadas con biología y botánica, mostrando su descripción y nivel de relevancia y ponderación.
