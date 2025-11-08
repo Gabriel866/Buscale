@@ -1,4 +1,4 @@
-## Materia
+## Materia 
 Programación logica funcional 7 SS
 ## Maestro
 Guillermo Alejandro, Chavez Sanchez
