@@ -9,21 +9,55 @@ Buscador de tesxto sobre biología y botánica desarrollado en Python – Stream
 
 ## Titulo
 
-# Análisis de Palabras Clave de Biología – Botánica
+# Análisis de texto y palabras calve de Biología – Botánica
 
-Aplicación interactiva desarrollada en Python con Streamlit, diseñada para explorar palabras clave relacionadas con biología y botánica, mostrando su descripción y nivel de relevancia (ponderación).
+Aplicación interactiva desarrollada en Python con Streamlit, diseñada para explorar palabras clave y texto relacionadas con biología y botánica, mostrando su descripción y nivel de relevancia y ponderación.
 
-Permite realizar búsquedas por palabra y visualizar los resultados en forma de tabla y gráfico de barras dinámico utilizando Altair.
+El proyecto fue actualizado para incluir una nueva funcionalidad de análisis de texto completo, complementando la búsqueda de palabras clave ya existente.
+
+Permite realizar búsquedas por palabra o texto y visualizar los resultados en forma de tabla y gráfico de barras dinámico utilizando Altair.
+
+## Cambios en la actualizacón
+
+Esta versión incluye una **nueva funcionalidad de análisis de texto completo**, que complementa la búsqueda por palabra clave ya existente.
+
+### Nueva analizador de texto
+
+Permite ingresar un **párrafo o texto completo**.  
+- Detecta automáticamente las **palabras clave** relacionadas con Biología y Botánica.  
+- Calcula un **puntaje total de relevancia** en función de las ponderaciones asociadas a cada palabra.  
+- Clasifica el texto según su relación con el tema:
+
+  | Puntaje total | Clasificación |
+  |----------------|-----------------------------|
+  | 0              | Sin relación |
+  | 1–199          | Relación leve |
+  | 200–499        | Relación moderada |
+  | 500 o más      | Alta relación  |
+
+  ### Nueva visualización
+
+  Tabla de palabras clave detectadas con su ponderación.  
+- Gráfico de barras dinámico generado con **Altair** para visualizar la relevancia de cada término.
+
+  ### Mejora del flujo de la app
+
+  Buscar conceptos clave y texto de biología y botánica.  
+- Mostrar descripciones breves de cada término.  
+- Visualizar su ponderación o grado de relevancia mediante un gráfico interactivo.  
+- Analizar textos completos y determinar su relación con el tema Biología–Botánica.
 
 ## Descripción del Proyecto
 
 Este proyecto tiene como objetivo ofrecer una herramienta educativa que permita:
 
-Buscar conceptos clave de biología y botánica.
+Buscar conceptos clave y texto de biología y botánica.
 
 Mostrar descripciones breves de cada término.
 
 Visualizar su ponderación o grado de relevancia mediante un gráfico interactivo.
+
+
 
 ## Tecnologías Utilizadas
 
@@ -43,18 +77,18 @@ Luego, instala las dependencias necesarias ejecutando: pip install streamlit alt
 
 ## Ejecución del Proyecto
 
-Guarda el archivo con el nombre app.py (o el que prefieras).
+Guarda el archivo con el nombre buscale.py.
 
-Abre una terminal en la carpeta donde se encuentre el archivo.
+Se abre una terminal en la carpeta donde se encuentre el archivo y/o desde la consola del visual studio code.
 
-Ejecuta el siguiente comando: streamlit run app.py y/o en CMD : streamlit run buscale.py 
+Ejecuta el siguiente comando: streamlit run buscale.py y/o en CMD : streamlit run buscale.py 
 
 
 ## Ejemplo de Uso
 
-En la barra de búsqueda, escribe una palabra como hoja, raíz o fotosíntesis.
+En la barra de búsqueda (Escribe o pega un texto para analizar), escribe una palabra como hoja, raíz o fotosíntesis o un texto.
 
-Presiona Buscar.
+Presiona Analizar texto.
 
 Se mostrará una tabla con los resultados y un gráfico con la ponderación de las palabras coincidentes.
 
