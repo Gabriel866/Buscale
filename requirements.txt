@@ -1,4 +1,4 @@
-import altair as alt
-import pandas as pd
-import streamlit as st
-import re
+altair as alt
+pandas as pd
+streamlit as st
+re
