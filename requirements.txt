@@ -1,4 +1,4 @@
-altair as alt
-pandas as pd
-streamlit as st
+altair
+pandas
+streamlit
 re
