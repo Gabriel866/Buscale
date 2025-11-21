@@ -33,7 +33,7 @@ st.set_page_config(
 )
 
 # ------------------------------------------------------------
-# Datos de ejemplo: Palabras clave de Biología y Botánica con ponderación
+# 1.- Define las palabras Palabras clave de Biología y Botánica con ponderación
 # ------------------------------------------------------------
 @st.cache_data
 def load_sample_data() -> pd.DataFrame:
@@ -79,16 +79,20 @@ def analyze_text(df: pd.DataFrame, text: str):
     Analiza el texto ingresado y calcula un puntaje de relevancia
     basado en las coincidencias con las palabras clave.
     """
-    text = text.lower()
+    # 2.- Antes e buscar coincidencias convierte todo el texto en minusculas para evitar errores
+
+    text = text.lower() 
     total_score = 0
     matches = []
 
     for _, row in df.iterrows():
         word = row["palabra_clave"].lower()
         weight = row["ponderacion"]
-        # Buscar coincidencias parciales (palabra o fragmento)
+
+     # 3.- Buscar coincidencias parciales (palabra o fragmento)
+
         if re.search(rf"\b{re.escape(word)}\b", text):
-            total_score += weight
+            total_score += weight # Suma las ponderaciones 
             matches.append((row["palabra_clave"], weight))
 
     if total_score == 0:
@@ -100,9 +104,15 @@ def analyze_text(df: pd.DataFrame, text: str):
     else:
         return total_score, matches, "Alta relación con Biología – Botánica 🌳"
 
+# 4.- Si la palabra clave aparece en el texto, significa que el contenido está relacionado con mi tema.
 
 # ------------------------------------------------------------
-# Aplicación principal
+# 5.- Analiza el texto para dar los resultados clasificando en nivel de relación
+# El puntaje final se compara en rancos 
+# 0: No hay relación
+# 1–199: Relación leve
+# 200–499: Relación moderada
+# 500 o más: Alta relación
 # ------------------------------------------------------------
 def app():
     st.title("🌿 Analizador de texto – Biología y Botánica")
