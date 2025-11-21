@@ -1,5 +1,23 @@
 #!/usr/bin/env python
-
+# ------------------------------------------------------------
+# Proyecto: Analizador de Texto – Biología y Botánica
+# Autor: Gabriel Enrique Lugo López
+# Descripción:
+#    Este programa analiza textos para identificar su relación
+#    con el tema de Biología–Botánica. Utiliza una lista de 
+#    palabras clave como: Fotosíntesis, Clorofila, Germinación,
+#    Xilema, Floema, Estomas, Hoja, Raíz, Polinización, entre otras.
+#
+#    El sistema emplea expresiones regulares para detectar 
+#    coincidencias en el texto, calcula un puntaje basado en la 
+#    ponderación de cada palabra clave y muestra los resultados 
+#    mediante una tabla y un gráfico interactivo con Streamlit.
+#
+# Objetivo:
+#    Determinar de manera rápida y visual si un texto está 
+#    relacionado con la Biología y Botánica, apoyándose en un 
+#    análisis de palabras clave y herramientas visuales.
+# ------------------------------------------------------------
 import altair as alt
 import pandas as pd
 import streamlit as st
